@@ -5,28 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
+    
 </head>
 <body>
     <button id="OverlayButton">TestButton</button>
+    <script>
+        const imgURL = 'https://cdn.analyticaaperformance.com/werbemittel-new/Werbemittel/DanielHechter/Converify/Sale/Sale50_Desktop.jpg';
+overlay.setAttribute('id','#Overlay');
+overlay.setAttribute('src',imgURL);
+overlay.style.display = 'none';
+overlay.style.position = 'fixed';
+overlay.style.zIndex = '99';
+overlay.style.margin = 'auto';
+overlay.style.top = '15%';
+overlay.style.right = '0';
+overlay.style.left = '0';
+body.appendChild(overlay);
+    </script>
 </body>
 </html>
-
-const CustomCSS = document.createElement('style');
-CustomCSS.setAttribute('id','test');
-CustomCSS.innerHTML = `
-    #OverlayButton {
-        color : #333333;
-        background-color : rgba(51, 51, 51, 0.05);
-        display : block;
-        padding : 10px 12px;
-        cursor : pointer;
-        position : absolute;
-        border-Radius : 8px;
-        width: 12%;
-        margin : auto;
-        top :  5%;
-        right : 0;
-        left : 0;
-    }
-`;
-head.appendChild(CustomCSS);
