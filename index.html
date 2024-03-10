@@ -8,8 +8,58 @@
     
 </head>
 <body>
-    <button id="OverlayButton">TestButton</button>
+    <img class="test" alt="">
     <script>
+//Selectors
+const body = document.querySelector('body');
+const head = document.querySelector('head');
+
+//Creating open button, overlay and close button
+const OButton = document.createElement('button');
+const XButton = document.createElement('img');
+const overlay = document.createElement('img');
+
+//Adding JQuery to DOM
+const JQuery = document.createElement('script');
+JQuery.setAttribute('src','https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+head.appendChild(JQuery);
+
+//Style & Position Button
+OButton.setAttribute('id','OverlayButton');
+OButton.textContent = 'Zeig mir das Overlay';
+body.appendChild(OButton);
+
+//Style & Position Overlay
+// const imgURL = 'https://cdn.analyticaaperformance.com/werbemittel-new/Werbemittel/DanielHechter/Converify/Sale/Sale50_Desktop.jpg';
+overlay.setAttribute('src','');
+overlay.setAttribute('id','Overlay');
+body.appendChild(overlay);
+
+//Style & Position XButton
+const imgURLXBtn = 'https://lh3.google.com/u/0/d/1LCueRYpuFraZo1fyJXzKgx0WzmgNahgX=w1920-h919-iv2';
+XButton.setAttribute('src',imgURLXBtn);
+XButton.setAttribute('id','CloseButton');
+body.appendChild(XButton);
+
+//Toggle Image & Button Text
+const ToggleMessage = () => {
+    if(OButton.textContent == 'Zeig mir das Overlay'){
+       OButton.textContent = 'Overlay schließen'; 
+    } else if (OButton.textContent == 'Overlay schließen'){
+    OButton.textContent = 'Zeig mir das Overlay';}
+}
+
+OButton.addEventListener('click', ()=>{
+    $(overlay).toggle();
+    $(XButton).toggle();
+    ToggleMessage();
+});
+
+XButton.addEventListener('click', ()=>{
+    $(overlay).toggle();
+    $(XButton).toggle();
+    ToggleMessage();
+});
     </script>
 </body>
 </html>

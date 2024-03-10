@@ -21,8 +21,7 @@
     margin: auto;
     top: 15%;
     right: 0;
-    left: 0;
-    background-image: url('https://cdn.analyticaaperformance.com/werbemittel-new/Werbemittel/DanielHechter/Converify/Sale/Sale50_Desktop.jpg');
+    left: 0; 
 }
 
 #CloseButton {
@@ -35,5 +34,4 @@
     top: 15.9%;
     right: 0;
     left: 44%;
-    background-image: url('https://lh3.google.com/u/0/d/1LCueRYpuFraZo1fyJXzKgx0WzmgNahgX=w1920-h919-iv2');
 }
