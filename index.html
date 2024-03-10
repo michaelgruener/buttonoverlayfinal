@@ -10,3 +10,23 @@
     <button id="OverlayButton">TestButton</button>
 </body>
 </html>
+
+const CustomCSS = document.createElement('style');
+CustomCSS.setAttribute('id','test');
+CustomCSS.innerHTML = `
+    #OverlayButton {
+        color : #333333;
+        background-color : rgba(51, 51, 51, 0.05);
+        display : block;
+        padding : 10px 12px;
+        cursor : pointer;
+        position : absolute;
+        border-Radius : 8px;
+        width: 12%;
+        margin : auto;
+        top :  5%;
+        right : 0;
+        left : 0;
+    }
+`;
+head.appendChild(CustomCSS);

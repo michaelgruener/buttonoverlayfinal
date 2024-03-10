@@ -13,3 +13,25 @@ top : 5%;
 right : 0;
 left : 0;
 }
+
+#Overlay {
+    display: none;
+    position: fixed;
+    z-Index : 99;
+    margin: auto;
+    top: 15%;
+    right: 0;
+    left: 0;
+}
+
+#CloseButton {
+    display: none;
+    width: 2%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 100;
+    margin: auto;
+    top: 15.9%;
+    right: 0;
+    left: 44%;
+}
