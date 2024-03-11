@@ -1,17 +1,13 @@
 #OverlayButton {
     color : "#333333";
     background-color : rgba(51, 51, 51, 0.05);
-    display : block;
     padding : 10px 12px;
     cursor : pointer;
     border-Radius : 8px;
     position : fixed;
-    z-Index : 98;
-    width: 12%;
-    margin : auto;
-    top : 5%;
-    right : 0;
-    left : 0;
+    padding: 10px;
+    margin : 0 auto;
+    z-index: 110;
 }
 
 .ParentElement {
