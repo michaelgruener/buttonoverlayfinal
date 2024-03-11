@@ -14,24 +14,26 @@
     left : 0;
 }
 
-#Overlay {
-    display: none;
-    position: fixed;
-    z-Index : 99;
-    margin: auto;
-    top: 15%;
-    right: 0;
-    left: 0; 
+.ParentElement {
+    position: absolute;
+    top:30%;
+    left: 50%;
+    right: 50%;
+    width: 600px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%) scale(1); 
 }
 
 #CloseButton {
-    display: none;
-    width: 2%;
-    position: fixed;
-    cursor: pointer;
-    z-index: 100;
+    position: absolute;
     margin: auto;
-    top: 15.9%;
-    right: 0;
-    left: 44%;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    max-width: 5%;
+}
+
+#Overlay {
+    position: absolute;
+    background-color: blue;
 }
