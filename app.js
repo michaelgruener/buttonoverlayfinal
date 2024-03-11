@@ -21,7 +21,7 @@ head.appendChild(CustomCSS);
 
 //Style & Position Button
 OButton.id = 'OverlayButton';
-OButton.textContent = 'Overlay öffnen';
+OButton.textContent = 'Zeig mir das Overlay';
 body.appendChild(OButton);
 
 //Create Parent Element
@@ -40,10 +40,10 @@ ParentElement.appendChild(XButton);
 
 //Toggle Image & Button Text
 const ToggleMessage = () => {
-    if(OButton.textContent == 'Overlay öffnen'){
-       OButton.textContent = 'Overlay verbergen'; 
-    } else if (OButton.textContent == 'Overlay verbergen'){
-    OButton.textContent = 'Overlay öffnen';}
+    if(OButton.textContent == 'Zeig mir das Overlay'){
+       OButton.textContent = 'Overlay schließen'; 
+    } else if (OButton.textContent == 'Overlay schließen'){
+    OButton.textContent = 'Zeig mir das Overlay';}
 }
 
 document.addEventListener('click', (e) => {
