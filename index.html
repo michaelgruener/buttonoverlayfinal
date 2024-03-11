@@ -10,51 +10,38 @@
 <body>
     <button id="debugger">test debug</button>
     <script>
-//Selectors
-const body = document.querySelector('body');
-const head = document.querySelector('head');
-
-//Creating parent element, overlay-child and close-child button
-const ParentElement = document.createElement('div');
-const XButton = document.createElement('img');
-const overlay = document.createElement('img');
-
-//Adding JQuery to DOM
-const JQuery = document.createElement('script');
-JQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js';
-head.appendChild(JQuery);
 
 //Adding CSS file to DOM
 const CustomCSS = document.createElement('link');
 CustomCSS.rel = 'stylesheet';
-CustomCSS.href = './styles.css';
-head.appendChild(CustomCSS);
+CustomCSS.href = 'https://michi19935.github.io/buttonoverlayfinal/styles.css';
+document.head.appendChild(CustomCSS);
 
 //Create Parent Element
+const ParentElement = document.createElement('div');
 ParentElement.classList = 'ParentElement';
-body.appendChild(ParentElement);
+document.body.appendChild(ParentElement);
 
 //Style & Position Overlay
+const overlay = document.createElement('img');
 overlay.id = 'Overlay';
-overlay.src = './Sale50_Desktop.jpg';
 ParentElement.appendChild(overlay);
 
-//Style & Position XButton
+//Style & Position Close Button
+const XButton = document.createElement('img');
+XButton.src= 'https://michi19935.github.io/buttonoverlayfinal/XButton.png';
 XButton.id = 'CloseButton';
-XButton.src = './XButton.png';
 ParentElement.appendChild(XButton);
 
 // Trigger Overlay
 document.onmouseleave = () => { 
   let Newtimestamp = new Date().getTime();
-
   //Read All Cookies from site and turn string into object and then search for OverlayViewed Cookie
   let cookies = document.cookie
   .split(';')
   .map(cookie => cookie.split('='))
   .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
   let OldTimestamp = cookies.OverlayViewed;
-
   let durationSinceLastViewed = new Date(Newtimestamp-OldTimestamp).getSeconds();
   //Store current timestamp in cookie
   document.cookie = `OverlayViewed=${Newtimestamp}`;
