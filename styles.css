@@ -7,7 +7,7 @@
     color : "#333333";
     background-color : rgb(300, 300, 300);
     width: 8%;
-    height: 35px;
+    line-height: 2em;
     cursor : pointer;
     border : 1px solid black;
     border-Radius : 8px;
