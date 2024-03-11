@@ -27,7 +27,7 @@ head.appendChild(JQuery);
 
 //Style & Position Button
 OButton.id = 'OverlayButton';
-OButton.textContent = 'Zeig mir das Overlay';
+OButton.textContent = 'Overlay öffnen';
 body.appendChild(OButton);
 
 //Create Parent Element
@@ -46,10 +46,10 @@ ParentElement.appendChild(XButton);
 
 //Toggle Image & Button Text
 const ToggleMessage = () => {
-    if(OButton.textContent == 'Zeig mir das Overlay'){
-       OButton.textContent = 'Overlay schließen'; 
-    } else if (OButton.textContent == 'Overlay schließen'){
-    OButton.textContent = 'Zeig mir das Overlay';}
+    if(OButton.textContent == 'Overlay öffnen'){
+       OButton.textContent = 'Overlay verbergen'; 
+    } else if (OButton.textContent == 'Overlay verbergen'){
+    OButton.textContent = 'Overlay öffnen';}
 }
 
 document.addEventListener('click', (e) => {
