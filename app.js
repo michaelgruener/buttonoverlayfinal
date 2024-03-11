@@ -2,10 +2,16 @@
 const body = document.querySelector('body');
 const head = document.querySelector('head');
 
-//Creating open button, overlay and close button
+//Creating open button, parent element, overlay-child and close-child button
 const OButton = document.createElement('button');
+const ParentElement = document.createElement('div');
 const XButton = document.createElement('img');
 const overlay = document.createElement('img');
+
+//Adding JQuery to DOM
+const JQuery = document.createElement('script');
+JQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js';
+head.appendChild(JQuery);
 
 //Adding CSS file to DOM
 const CustomCSS = document.createElement('link');
@@ -13,26 +19,24 @@ CustomCSS.rel = 'stylesheet';
 CustomCSS.href = 'https://michi19935.github.io/buttonoverlayfinal/styles.css';
 head.appendChild(CustomCSS);
 
-//Adding JQuery to DOM
-const JQuery = document.createElement('script');
-JQuery.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js';
-head.appendChild(JQuery);
-
 //Style & Position Button
 OButton.id = 'OverlayButton';
 OButton.textContent = 'Zeig mir das Overlay';
 body.appendChild(OButton);
 
+//Create Parent Element
+ParentElement.classList = 'ParentElement';
+body.appendChild(ParentElement);
+
 //Style & Position Overlay
 overlay.id = 'Overlay';
 overlay.src = 'https://cdn.analyticaaperformance.com/werbemittel-new/Werbemittel/DanielHechter/Converify/Sale/Sale50_Desktop.jpg';
-body.appendChild(overlay);
+ParentElement.appendChild(overlay);
 
 //Style & Position XButton
-const imgURLXBtn = 'https://lh3.google.com/u/0/d/1LCueRYpuFraZo1fyJXzKgx0WzmgNahgX=w1920-h919-iv2';
-XButton.setAttribute('src',imgURLXBtn);
-XButton.setAttribute('id','CloseButton');
-body.appendChild(XButton);
+XButton.id = 'CloseButton';
+XButton.src = 'https://lh3.google.com/u/0/d/1LCueRYpuFraZo1fyJXzKgx0WzmgNahgX=w1920-h919-iv2';
+ParentElement.appendChild(XButton);
 
 //Toggle Image & Button Text
 const ToggleMessage = () => {
@@ -44,11 +48,12 @@ const ToggleMessage = () => {
 
 document.addEventListener('click', (e) => {
   if(e.target.id=='OverlayButton' || e.target.id=='CloseButton'){
-    $(overlay).toggle();
-    $(XButton).toggle();
+    $(ParentElement).toggle();
     setTimeout(()=>ToggleMessage(),10);
   }
 })
+
+
 
 
 

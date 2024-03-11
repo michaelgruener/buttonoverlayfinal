@@ -8,13 +8,13 @@
     
 </head>
 <body>
-    <img class="test" alt="">
+    <p style="padding: 400px; background-color: beige;">Hallo</p>
     <script>
-//Selectors#
+//Selectors
 const body = document.querySelector('body');
 const head = document.querySelector('head');
 
-//Creating open button, overlay and close button
+//Creating open button, parent element, overlay-child and close-child button
 const OButton = document.createElement('button');
 const ParentElement = document.createElement('div');
 const XButton = document.createElement('img');
@@ -54,8 +54,7 @@ const ToggleMessage = () => {
 
 document.addEventListener('click', (e) => {
   if(e.target.id=='OverlayButton' || e.target.id=='CloseButton'){
-    $(overlay).toggle();
-    $(XButton).toggle();
+    $(ParentElement).toggle();
     setTimeout(()=>ToggleMessage(),10);
   }
 })
