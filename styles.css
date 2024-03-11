@@ -22,7 +22,7 @@
 .ParentElement {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     right: 50%;
     width: 600px;
