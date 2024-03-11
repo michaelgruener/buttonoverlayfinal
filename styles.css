@@ -26,16 +26,22 @@
     left: 50%;
     right: 50%;
     width: 600px;
+    height: 350px;
     max-width: 600px;
-    margin: 0 auto;
     transform: translate(-50%, -50%) scale(1); 
-    z-index: 110;
 }
+
+#Overlay{
+    position: fixed;
+    background: url('https://michi19935.github.io/buttonoverlayfinal/Sale50_Desktop.jpg');
+    width: inherit;
+    height: inherit;
+}
+
 #CloseButton {
     position: fixed;
-    margin: auto;
-    top: 5px;
-    right: 5px;
     cursor: pointer;
-    width: 5%;
+    top: 12px;
+    right: 10px;
+    width: 4%;
 }
